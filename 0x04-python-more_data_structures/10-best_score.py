@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-def multiply_by_2(a_dictionary):
-    new_dir = a_dictionary.copy()
-    list_keys = list(new_dir.keys())
+def best_score(a_dictionary):
+    if not a_dictionary:
+        return (None)
 
-    for i in list_keys:
-        new_dir[i] *= 2
-
-    return (new_dir)
+    return (max(a_dictionary, key=a_dictionary.get))
